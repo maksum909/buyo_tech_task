@@ -10,6 +10,7 @@
 # Frontend
 **/node_modules/
 **/dist/
+**/package-lock.json
 
 # IDE and local files
 **/.idea/
