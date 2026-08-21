@@ -463,13 +463,6 @@ async def generate_offers_data(
                         model[period]["lead_price"] = model[period]["spend"] / model[period]["conversion"] if model[period]["conversion"] else 0
 
                         if period == 'first':
-                            # Расчет цены fact и max для первого периода
-                            # формулировка - в комментах
-                            # Цена fact = Спенд / Апруви
-                            # Цена max = Сред. чек $ * KPI%
-                            # Минус = -Спенд, если Апруви = 0 и Спенд > 0
-                            # Минус = (Цена max - Цена fact) * Апруви, если Цена fact > Цена max
-
                             spend = model[period]["spend"]
                             approves = model[period]["approves_count"]
                             model[period]["usd_median"] = model[period]["approves_median"] * 1000 * sum_usd_rate
